@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">UdaScoreKeeper</string>
+    <string name="empty_score">0</string>
+</resources>

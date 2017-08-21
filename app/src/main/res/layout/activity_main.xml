@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.zhangfan.udascorekeeper.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="360dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/team_lakers_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Los Angeles Lakers"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/divider"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/team_cavaliers_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cleveland Cavaliers"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/team_lakers_label"
+        app:layout_constraintLeft_toRightOf="@+id/divider"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/lakers_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/team_lakers_label"
+        tools:text="122" />
+
+    <TextView
+        android:id="@+id/cavaliers_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintLeft_toRightOf="@+id/divider"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team_cavaliers_label"
+        tools:text="112" />
+
+    <Button
+        android:id="@+id/lakers_3points"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryLight"
+        android:onClick="addThreePointToLakers"
+        android:text="+3 points"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/lakers_score" />
+
+    <Button
+        android:id="@+id/lakers_2points"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryLight"
+        android:onClick="addTwoPointToLakers"
+        android:text="+2 points"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/lakers_3points" />
+
+    <Button
+        android:id="@+id/lakers_freethrow"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/colorPrimaryLight"
+        android:onClick="addOnePointToLakers"
+        android:text="free throw"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/lakers_2points" />
+
+    <Button
+        android:id="@+id/cavaliers_3points"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight"
+        android:onClick="addThreePointToCavaliers"
+        android:text="+3 points"
+        app:layout_constraintBottom_toBottomOf="@+id/lakers_3points"
+        app:layout_constraintLeft_toRightOf="@+id/divider"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/cavaliers_2points"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight"
+        android:onClick="addTwoPointToCavaliers"
+        android:text="+2 points"
+        app:layout_constraintBottom_toBottomOf="@+id/lakers_2points"
+        app:layout_constraintLeft_toRightOf="@+id/divider"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/cavaliers_freethrow"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryLight"
+        android:onClick="addOnePointToCavaliers"
+        android:text="free throw"
+        app:layout_constraintBottom_toBottomOf="@+id/lakers_freethrow"
+        app:layout_constraintLeft_toRightOf="@+id/divider"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@color/colorPrimary"
+        android:onClick="resetScore"
+        android:text="reset"
+        android:textColor="@android:color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+
+</android.support.constraint.ConstraintLayout>
